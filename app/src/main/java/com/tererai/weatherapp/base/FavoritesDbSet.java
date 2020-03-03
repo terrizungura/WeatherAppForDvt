@@ -17,7 +17,7 @@ r=realm;
 }
     public RealmResults<FavoritesData> getFavoritesData() {
 
-        return r.where(FavoritesData.class).findAll().sort("WeatherDate");
+        return r.where(FavoritesData.class).findAll().sort("City");
     }
 
     public FavoritesData getFavoritesDataByCity(String City) {

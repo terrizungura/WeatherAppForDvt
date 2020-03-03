@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/seach_city"
-        android:title="Search City">
+        android:id="@+id/search_city"
+        android:title="@string/search_city"/>
 
-    </item>
+    <item
+        android:id="@+id/favorites"
+        android:title="@string/favorite_places"/>
 </menu>

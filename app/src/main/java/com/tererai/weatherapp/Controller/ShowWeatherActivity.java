@@ -56,7 +56,7 @@ public class ShowWeatherActivity extends AppCompatActivity {
     @BindView(R.id.txtCurrentTemp)
     TextView txtCurrentTempHeader;
     @BindView(R.id.no_data)
-    TextView noDataText;
+    TextView txtNoData;
     @BindView(R.id.txtCurrentCondition)
     TextView txtCurrentConditions;
     @BindView(R.id.summary_layout)
@@ -128,6 +128,7 @@ public class ShowWeatherActivity extends AppCompatActivity {
 
         rlm.insertOrUpdate(favoritesData);
         rlm.commitTransaction();
+        imgFavorite.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -139,9 +140,13 @@ public class ShowWeatherActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.seach_city:
-                Intent intent = new Intent(ShowWeatherActivity.this, SearchCityActivity.class);
-                startActivity(intent);
+            case R.id.search_city:
+                Intent intentSearch = new Intent(ShowWeatherActivity.this, SearchCityActivity.class);
+                startActivity(intentSearch);
+                return true;
+            case R.id.favorites:
+                Intent intentFavPlace = new Intent(ShowWeatherActivity.this, FavoritePlacesActivity.class);
+                startActivity(intentFavPlace);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -242,6 +247,9 @@ public class ShowWeatherActivity extends AppCompatActivity {
                     showHideProgressDialog(false);
                     populateUIs(response.body());
                 }
+                else{
+                    showHideProgressDialog(false);
+                }
             }
 
             @Override
@@ -312,13 +320,13 @@ public class ShowWeatherActivity extends AppCompatActivity {
             daysRecyclerview.setAdapter(adapter);
             daysRecyclerview.setLayoutManager(new LinearLayoutManager(this));
             daysRecyclerview.setVisibility(View.VISIBLE);
-            noDataText.setVisibility(View.GONE);
+            txtNoData.setVisibility(View.GONE);
             txtCity.setText(weatherResponse.getCity().getName());
 
             populateSummary(weatherDataList);
         } else {
             daysRecyclerview.setVisibility(View.GONE);
-            noDataText.setVisibility(View.VISIBLE);
+            txtNoData.setVisibility(View.VISIBLE);
         }
     }
 

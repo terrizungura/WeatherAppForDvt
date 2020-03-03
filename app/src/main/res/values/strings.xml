@@ -9,4 +9,5 @@
     <string name="sunny_dumy">Welcome to Weather App</string>
     <string name="search_city">Search City</string>
     <string name="enter_city">Enter City</string>
+    <string name="favorite_places">Favorite Places</string>
 </resources>

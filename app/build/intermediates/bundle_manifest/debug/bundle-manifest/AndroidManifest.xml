@@ -22,8 +22,12 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.tererai.weatherapp.Controller.FavoritePlacesActivity" />
-        <activity android:name="com.tererai.weatherapp.Controller.SearchCityActivity" />
+        <activity
+            android:name="com.tererai.weatherapp.Controller.FavoritePlacesActivity"
+            android:parentActivityName="com.tererai.weatherapp.Controller.ShowWeatherActivity" />
+        <activity
+            android:name="com.tererai.weatherapp.Controller.SearchCityActivity"
+            android:parentActivityName="com.tererai.weatherapp.Controller.ShowWeatherActivity" />
         <activity
             android:name="com.tererai.weatherapp.Controller.ShowWeatherActivity"
             android:screenOrientation="fullSensor" >

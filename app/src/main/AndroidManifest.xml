@@ -15,8 +15,10 @@
         android:theme="@style/AppTheme">
 
 
-        <activity android:name=".Controller.FavoritePlacesActivity" />
-        <activity android:name=".Controller.SearchCityActivity" />
+        <activity android:name=".Controller.FavoritePlacesActivity"
+            android:parentActivityName=".Controller.ShowWeatherActivity"/>
+        <activity android:name=".Controller.SearchCityActivity"
+            android:parentActivityName=".Controller.ShowWeatherActivity"/>
         <activity android:name=".Controller.ShowWeatherActivity"
             android:screenOrientation="fullSensor">
             <intent-filter>

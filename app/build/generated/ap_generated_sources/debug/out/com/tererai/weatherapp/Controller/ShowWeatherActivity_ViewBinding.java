@@ -20,7 +20,7 @@ import java.lang.Override;
 public class ShowWeatherActivity_ViewBinding implements Unbinder {
   private ShowWeatherActivity target;
 
-  private View view7f08008d;
+  private View view7f08008f;
 
   @UiThread
   public ShowWeatherActivity_ViewBinding(ShowWeatherActivity target) {
@@ -34,7 +34,7 @@ public class ShowWeatherActivity_ViewBinding implements Unbinder {
     View view;
     target.daysRecyclerview = Utils.findRequiredViewAsType(source, R.id.temp_recyclerview, "field 'daysRecyclerview'", RecyclerView.class);
     target.txtCurrentTempHeader = Utils.findRequiredViewAsType(source, R.id.txtCurrentTemp, "field 'txtCurrentTempHeader'", TextView.class);
-    target.noDataText = Utils.findRequiredViewAsType(source, R.id.no_data, "field 'noDataText'", TextView.class);
+    target.txtNoData = Utils.findRequiredViewAsType(source, R.id.no_data, "field 'txtNoData'", TextView.class);
     target.txtCurrentConditions = Utils.findRequiredViewAsType(source, R.id.txtCurrentCondition, "field 'txtCurrentConditions'", TextView.class);
     target.summaryLayout = Utils.findRequiredViewAsType(source, R.id.summary_layout, "field 'summaryLayout'", ConstraintLayout.class);
     target.txtMinTemp = Utils.findRequiredViewAsType(source, R.id.min_temp_text, "field 'txtMinTemp'", TextView.class);
@@ -45,7 +45,7 @@ public class ShowWeatherActivity_ViewBinding implements Unbinder {
     target.showWeatherView = Utils.findRequiredViewAsType(source, R.id.showWeatherView, "field 'showWeatherView'", ConstraintLayout.class);
     view = Utils.findRequiredView(source, R.id.imgFavorite, "field 'imgFavorite' and method 'saveFavorites'");
     target.imgFavorite = Utils.castView(view, R.id.imgFavorite, "field 'imgFavorite'", ImageView.class);
-    view7f08008d = view;
+    view7f08008f = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -66,7 +66,7 @@ public class ShowWeatherActivity_ViewBinding implements Unbinder {
 
     target.daysRecyclerview = null;
     target.txtCurrentTempHeader = null;
-    target.noDataText = null;
+    target.txtNoData = null;
     target.txtCurrentConditions = null;
     target.summaryLayout = null;
     target.txtMinTemp = null;
@@ -77,7 +77,7 @@ public class ShowWeatherActivity_ViewBinding implements Unbinder {
     target.showWeatherView = null;
     target.imgFavorite = null;
 
-    view7f08008d.setOnClickListener(null);
-    view7f08008d = null;
+    view7f08008f.setOnClickListener(null);
+    view7f08008f = null;
   }
 }
