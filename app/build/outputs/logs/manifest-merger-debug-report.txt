@@ -1,0 +1,190 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:2:1-30:12
+MERGED from [io.realm:realm-android-library:6.0.2] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\92229ceac7303d799a0f54cc493428de\jetified-realm-android-library-6.0.2\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\265a1b18f55a55ce349a928f6777fd9c\material-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\679eda94ab7ebd05998b9c1272d4f51f\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\428c7a2f42e72a21ce43221fea5e9b84\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\044f1eb1a66fb84d0b154dc748b002c7\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\2ac1d11f8a97cd05a47e3a5db578b4f3\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.jakewharton:butterknife:10.2.1] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\090939e73924ea549555a14f5c10e187\jetified-butterknife-10.2.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.getkeepsafe.relinker:relinker:1.3.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\223b9c823a7a4eaee2a40d17c10b1630\jetified-relinker-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\21399219d141b1e22e161fe8bf2b82e2\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\3fe169b02ad1cad9faa602dd9da3de8c\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\c79e48e74195762e0a06521ba655dfdd\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\30481e5d5fdf40790a1d9b78cf38ce3c\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\db3a9571c04af7b42699b9f5afdb7c81\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\6dd6f93e671d6872689e43955343c3ee\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\72357c6a96b5dd907f0efb3b63dda7a2\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\7c41de85b414fddc5643c6f7eb89a866\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\c4c5389ee4b30c465e7e90361f112e6a\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife-runtime:10.2.1] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\409aa75bac3e17d67b00865eab87341a\jetified-butterknife-runtime-10.2.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\7382cb1b099eda1b023a9d43dc087294\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\0b5ee1aba06501f74197bbacf8a2594e\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\d6c6a21d86608acf982483b793c5351e\core-1.1.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\499a0eeb8330a01b3be54be2e1b6984e\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\e6286b72ddc1742208c542c61ae116bb\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\7bc71bae43ed889f130f9a49bd5183d2\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\065de4b0080053eae263b74cfc08ded1\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\caba03e850382cc803e3b0bf667c8168\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\1dc84d0dae37ed072aabeb02e913b337\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\91e871c00ca8d0b9d71ac58a3d22e19d\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\1d6fa0c3fefcd81cd1e13c88160ea5e0\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\8d2350aec44e17c59665752344a813bf\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\d7667d531ba376498d5d836dfed4fd4e\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:2:1-30:12
+	package
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:3:5-37
+		INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:2:1-30:12
+		INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:2:1-30:12
+		INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:6:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:7:22-76
+application
+ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:9:5-28:19
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\265a1b18f55a55ce349a928f6777fd9c\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\265a1b18f55a55ce349a928f6777fd9c\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\428c7a2f42e72a21ce43221fea5e9b84\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\428c7a2f42e72a21ce43221fea5e9b84\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\d6c6a21d86608acf982483b793c5351e\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\d6c6a21d86608acf982483b793c5351e\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\7bc71bae43ed889f130f9a49bd5183d2\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\7bc71bae43ed889f130f9a49bd5183d2\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\d6c6a21d86608acf982483b793c5351e\core-1.1.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:12:9-41
+	android:roundIcon
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:13:9-54
+	android:icon
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:10:9-35
+	android:theme
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:15:9-40
+activity#com.tererai.weatherapp.Controller.FavoritePlacesActivity
+ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:18:9-71
+	android:name
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:18:19-68
+activity#com.tererai.weatherapp.Controller.SearchCityActivity
+ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:19:9-67
+	android:name
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:19:19-64
+activity#com.tererai.weatherapp.Controller.ShowWeatherActivity
+ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:20:9-27:20
+	android:screenOrientation
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:21:13-51
+	android:name
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:20:19-65
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:22:13-26:29
+action#android.intent.action.MAIN
+ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:25:27-74
+uses-sdk
+INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+MERGED from [io.realm:realm-android-library:6.0.2] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\92229ceac7303d799a0f54cc493428de\jetified-realm-android-library-6.0.2\AndroidManifest.xml:6:5-8:41
+MERGED from [io.realm:realm-android-library:6.0.2] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\92229ceac7303d799a0f54cc493428de\jetified-realm-android-library-6.0.2\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\265a1b18f55a55ce349a928f6777fd9c\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\265a1b18f55a55ce349a928f6777fd9c\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\679eda94ab7ebd05998b9c1272d4f51f\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\679eda94ab7ebd05998b9c1272d4f51f\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\428c7a2f42e72a21ce43221fea5e9b84\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\428c7a2f42e72a21ce43221fea5e9b84\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\044f1eb1a66fb84d0b154dc748b002c7\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\044f1eb1a66fb84d0b154dc748b002c7\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\2ac1d11f8a97cd05a47e3a5db578b4f3\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\2ac1d11f8a97cd05a47e3a5db578b4f3\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.jakewharton:butterknife:10.2.1] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\090939e73924ea549555a14f5c10e187\jetified-butterknife-10.2.1\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife:10.2.1] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\090939e73924ea549555a14f5c10e187\jetified-butterknife-10.2.1\AndroidManifest.xml:5:5-44
+MERGED from [com.getkeepsafe.relinker:relinker:1.3.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\223b9c823a7a4eaee2a40d17c10b1630\jetified-relinker-1.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.getkeepsafe.relinker:relinker:1.3.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\223b9c823a7a4eaee2a40d17c10b1630\jetified-relinker-1.3.0\AndroidManifest.xml:5:5-43
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\21399219d141b1e22e161fe8bf2b82e2\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\21399219d141b1e22e161fe8bf2b82e2\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\3fe169b02ad1cad9faa602dd9da3de8c\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\3fe169b02ad1cad9faa602dd9da3de8c\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\c79e48e74195762e0a06521ba655dfdd\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\c79e48e74195762e0a06521ba655dfdd\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\30481e5d5fdf40790a1d9b78cf38ce3c\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\30481e5d5fdf40790a1d9b78cf38ce3c\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\db3a9571c04af7b42699b9f5afdb7c81\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\db3a9571c04af7b42699b9f5afdb7c81\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\6dd6f93e671d6872689e43955343c3ee\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\6dd6f93e671d6872689e43955343c3ee\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\72357c6a96b5dd907f0efb3b63dda7a2\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\72357c6a96b5dd907f0efb3b63dda7a2\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\7c41de85b414fddc5643c6f7eb89a866\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\7c41de85b414fddc5643c6f7eb89a866\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\c4c5389ee4b30c465e7e90361f112e6a\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\c4c5389ee4b30c465e7e90361f112e6a\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.2.1] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\409aa75bac3e17d67b00865eab87341a\jetified-butterknife-runtime-10.2.1\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.2.1] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\409aa75bac3e17d67b00865eab87341a\jetified-butterknife-runtime-10.2.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\7382cb1b099eda1b023a9d43dc087294\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\7382cb1b099eda1b023a9d43dc087294\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\0b5ee1aba06501f74197bbacf8a2594e\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\0b5ee1aba06501f74197bbacf8a2594e\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\d6c6a21d86608acf982483b793c5351e\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\d6c6a21d86608acf982483b793c5351e\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\499a0eeb8330a01b3be54be2e1b6984e\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\499a0eeb8330a01b3be54be2e1b6984e\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\e6286b72ddc1742208c542c61ae116bb\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\e6286b72ddc1742208c542c61ae116bb\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\7bc71bae43ed889f130f9a49bd5183d2\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\7bc71bae43ed889f130f9a49bd5183d2\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\065de4b0080053eae263b74cfc08ded1\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\065de4b0080053eae263b74cfc08ded1\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\caba03e850382cc803e3b0bf667c8168\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\caba03e850382cc803e3b0bf667c8168\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\1dc84d0dae37ed072aabeb02e913b337\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\1dc84d0dae37ed072aabeb02e913b337\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\91e871c00ca8d0b9d71ac58a3d22e19d\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\91e871c00ca8d0b9d71ac58a3d22e19d\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\1d6fa0c3fefcd81cd1e13c88160ea5e0\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\1d6fa0c3fefcd81cd1e13c88160ea5e0\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\8d2350aec44e17c59665752344a813bf\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\8d2350aec44e17c59665752344a813bf\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\d7667d531ba376498d5d836dfed4fd4e\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\d7667d531ba376498d5d836dfed4fd4e\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml

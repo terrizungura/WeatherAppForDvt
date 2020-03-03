@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="sun_text">sun</string>
+    <string name="min_temp">Min</string>
+    <string name="current_temp">Current</string>
+    <string name="max_temp">Max</string>
+    <string name="temp_si_unit">%1d°</string>
+    <string name="no_weather_information_displayed">No weather information displayed</string>
+    <string name="sunny_dumy">Welcome to Weather App</string>
+    <string name="search_city">Search City</string>
+    <string name="enter_city">Enter City</string>
+</resources>

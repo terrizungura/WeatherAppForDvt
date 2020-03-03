@@ -1,0 +1,66 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tererai.weatherapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:6:22-78
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:7:22-76
+14
+15    <application
+15-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:9:5-28:19
+16        android:allowBackup="true"
+16-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:10:9-35
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\d6c6a21d86608acf982483b793c5351e\core-1.1.0\AndroidManifest.xml:24:18-86
+18        android:debuggable="true"
+19        android:icon="@mipmap/ic_launcher"
+19-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:11:9-43
+20        android:label="@string/app_name"
+20-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:12:9-41
+21        android:roundIcon="@mipmap/ic_launcher_round"
+21-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:13:9-54
+22        android:supportsRtl="true"
+22-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:14:9-35
+23        android:testOnly="true"
+24        android:theme="@style/AppTheme" >
+24-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:15:9-40
+25        <activity android:name="com.tererai.weatherapp.Controller.FavoritePlacesActivity" />
+25-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:18:9-71
+25-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:18:19-68
+26        <activity android:name="com.tererai.weatherapp.Controller.SearchCityActivity" />
+26-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:19:9-67
+26-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:19:19-64
+27        <activity
+27-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:20:9-27:20
+28            android:name="com.tererai.weatherapp.Controller.ShowWeatherActivity"
+28-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:20:19-65
+29            android:screenOrientation="fullSensor" >
+29-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:21:13-51
+30            <intent-filter>
+30-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:22:13-26:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:23:17-69
+31-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:23:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:25:17-77
+33-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:25:27-74
+34            </intent-filter>
+35        </activity>
+36    </application>
+37
+38</manifest>
