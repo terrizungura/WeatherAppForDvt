@@ -1,6 +1,7 @@
 package com.tererai.weatherapp.base;
 
 import androidx.annotation.Nullable;
+
 import com.tererai.weatherapp.utils.DateUtil;
 
 public class WeatherData {
@@ -13,16 +14,16 @@ public class WeatherData {
 
     public WeatherData(WeatherResponseList weatherResponse) {
         java.util.List<Weather> weatherList = weatherResponse.getWeather();
-        this.mTemperature = (int)(weatherResponse.getMain().getTemp() - Fahrenheit);
-        this.mMinTemperature = (int)(weatherResponse.getMain().getTempMin()- Fahrenheit);
-        this.mMaxTemperature = (int)(weatherResponse.getMain().getTempMax() - Fahrenheit);
+        this.mTemperature = (int) (weatherResponse.getMain().getTemp() - Fahrenheit);
+        this.mMinTemperature = (int) (weatherResponse.getMain().getTempMin() - Fahrenheit);
+        this.mMaxTemperature = (int) (weatherResponse.getMain().getTempMax() - Fahrenheit);
         this.mCurrentCondition = weatherList.get(0).getMain();
         this.mDay = DateUtil.getDay(weatherResponse.getDtTxt());
     }
 
     @Override
     public boolean equals(@Nullable Object obj) {
-        if (obj == null){
+        if (obj == null) {
             return false;
         }
 
@@ -30,7 +31,7 @@ public class WeatherData {
             return false;
         }
 
-        WeatherData inputWeatherData = (WeatherData)obj;
+        WeatherData inputWeatherData = (WeatherData) obj;
         return inputWeatherData.getmDay().toLowerCase().equals(this.getmDay().toLowerCase());
     }
 

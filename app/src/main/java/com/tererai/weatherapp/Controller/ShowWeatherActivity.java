@@ -50,20 +50,32 @@ import java.util.List;
 
 public class ShowWeatherActivity extends AppCompatActivity {
 
-    @BindView(R.id.temp_recyclerview) RecyclerView daysRecyclerview;
-    @BindView(R.id.txtCurrentTemp) TextView currentTempHeader;
-    @BindView(R.id.no_data) TextView noDataText;
-    @BindView(R.id.txtCurrentCondition) TextView currentConditions;
-    @BindView(R.id.summary_layout) ConstraintLayout summaryLayout;
-    @BindView(R.id.min_temp_text) TextView minTemp;
-    @BindView(R.id.current_temp_text) TextView currentTemp;
-    @BindView(R.id.max_temp_text) TextView maxTemp;
-
-    @BindView(R.id.txtCity) TextView txtCity;
-    @BindView(R.id.imgMainIcon) ImageView imgMainIcon;
-    @BindView(R.id.showWeatherView) ConstraintLayout showWeatherView;
-    @BindView(R.id.imgFavorite) ImageView imgFavorite;
-    @BindDrawable(R.drawable.fav) Drawable fav;
+    @BindView(R.id.temp_recyclerview)
+    RecyclerView daysRecyclerview;
+    @BindView(R.id.txtCurrentTemp)
+    TextView txtCurrentTempHeader;
+    @BindView(R.id.no_data)
+    TextView noDataText;
+    @BindView(R.id.txtCurrentCondition)
+    TextView txtCurrentConditions;
+    @BindView(R.id.summary_layout)
+    ConstraintLayout summaryLayout;
+    @BindView(R.id.min_temp_text)
+    TextView txtMinTemp;
+    @BindView(R.id.current_temp_text)
+    TextView txtCurrentTemp;
+    @BindView(R.id.max_temp_text)
+    TextView txtMaxTemp;
+    @BindView(R.id.txtCity)
+    TextView txtCity;
+    @BindView(R.id.imgMainIcon)
+    ImageView imgMainIcon;
+    @BindView(R.id.showWeatherView)
+    ConstraintLayout showWeatherView;
+    @BindView(R.id.imgFavorite)
+    ImageView imgFavorite;
+    @BindDrawable(R.drawable.fav)
+    Drawable fav;
 
     private ProgressDialog progressDialog;
     private LocationManager mLocationManager;
@@ -76,12 +88,15 @@ public class ShowWeatherActivity extends AppCompatActivity {
     private final int REQUEST_CODE = 123;
     private final String TAG = ShowWeatherActivity.class.getSimpleName();
     String LOCATION_PROVIDER = LocationManager.GPS_PROVIDER;
-    // App ID to use OpenWeather data
+
     private final String APP_ID = "728e7483dddb8d88cfdc006408674a1b";
     // Time between location updates (5000 milliseconds or 5 seconds)
     private final long MIN_TIME = 5000;
     // Distance between location updates (1000m or 1km)
     private final float MIN_DISTANCE = 1000;
+    private final String RAIN_CONDITION = "Rain";
+    private final String CLOUD_CONDITION = "Clouds";
+    private final String CLEAR_CONDITION = "Clear";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +105,6 @@ public class ShowWeatherActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         imgFavorite.setImageDrawable(fav);
-
 
         Realm.init(this);
         rlm = Realm.getDefaultInstance();
@@ -101,21 +115,18 @@ public class ShowWeatherActivity extends AppCompatActivity {
     public void saveFavorites() {
 
         favoritesDbSet = new FavoritesDbSet(rlm);
-
         FavoritesData favoritesData = new FavoritesData();
-
-        favoritesData= favoritesDbSet.createFavoritesData(txtCity.getText().toString());
+        favoritesData = favoritesDbSet.createFavoritesData(txtCity.getText().toString());
         rlm.beginTransaction();
 
         favoritesData.City = txtCity.getText().toString();
-        favoritesData.CurrentCondition =currentConditions.getText().toString();
-        favoritesData.CurrentTemp = currentTemp.getText().toString();
-        favoritesData.MinTemp = minTemp.getText().toString();
-        favoritesData.MaxTemp = maxTemp.getText().toString();
+        favoritesData.CurrentCondition = txtCurrentConditions.getText().toString();
+        favoritesData.CurrentTemp = txtCurrentTemp.getText().toString();
+        favoritesData.MinTemp = txtMinTemp.getText().toString();
+        favoritesData.MaxTemp = txtMaxTemp.getText().toString();
 
         rlm.insertOrUpdate(favoritesData);
         rlm.commitTransaction();
-
     }
 
     @Override
@@ -163,7 +174,7 @@ public class ShowWeatherActivity extends AppCompatActivity {
         mLocationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                Log.d("Weather ", "onLocationChanged() called");
+                Log.d(TAG, "onLocationChanged() called");
                 getWeatherForecast(location);
             }
 
@@ -179,7 +190,7 @@ public class ShowWeatherActivity extends AppCompatActivity {
 
             @Override
             public void onProviderDisabled(String provider) {
-                Log.d("Weather: ", "onProviderDisabled() called");
+                Log.d(TAG, "onProviderDisabled() called");
             }
         };
 
@@ -187,14 +198,9 @@ public class ShowWeatherActivity extends AppCompatActivity {
                 PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) !=
                         PackageManager.PERMISSION_GRANTED) {
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+
             ActivityCompat
-                    .requestPermissions(this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE);
+                    .requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE);
             return;
         }
         mLocationManager.requestLocationUpdates(LOCATION_PROVIDER, MIN_TIME, MIN_DISTANCE, mLocationListener);
@@ -208,15 +214,14 @@ public class ShowWeatherActivity extends AppCompatActivity {
 
         GetWeatherService weatherService = RetrofitClientInstance.getRetrofitInstance().create(GetWeatherService.class);
         Call<WeatherResponse> call;
-         if (city!=null) {
-             call = weatherService.getWeatherForCity(APP_ID, city);
-             Log.d("Weather ", "getWeatherForCity() called");
+        if (city != null) {
+            call = weatherService.getWeatherForCity(APP_ID, city);
+            Log.d(TAG, "getWeatherForCity() called");
 
-         }
-         else {
-             call = weatherService.getWeatherForecast(APP_ID, longitude, latitude);
-             Log.d("Weather ", "getWeatherForecast() called");
-         }
+        } else {
+            call = weatherService.getWeatherForecast(APP_ID, longitude, latitude);
+            Log.d(TAG, "getWeatherForecast() called");
+        }
 
         call.enqueue(new Callback<WeatherResponse>() {
             @Override
@@ -242,28 +247,30 @@ public class ShowWeatherActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-            @NonNull int[] grantResults) {
+                                           @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
         if (requestCode == REQUEST_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) { ; }
-            Log.d("Weather: ", "permission granted");
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                ;
+            }
+            Log.d(TAG, "permission granted");
             getWeatherForCurrentLocation();
         } else {
-            Log.d("Weather: ", "permissions denied");
+            Log.d(TAG, "permissions denied");
         }
     }
 
     private int updateDailyIcons(WeatherData weatherData) {
         String CurrentCondition = weatherData.getmCurrentCondition();
-        currentConditions.setText(CurrentCondition.toUpperCase());
+        txtCurrentConditions.setText(CurrentCondition.toUpperCase());
         updateBackgroundColor(CurrentCondition);
         switch (CurrentCondition) {
-            case "Rain":
+            case RAIN_CONDITION:
                 return R.drawable.forest_rainy;
-            case "Clouds":
+            case CLOUD_CONDITION:
                 return R.drawable.forest_cloudy;
-            case "Clear":
+            case CLEAR_CONDITION:
             default:
                 return R.drawable.forest_sunny;
         }
@@ -307,20 +314,20 @@ public class ShowWeatherActivity extends AppCompatActivity {
         com.tererai.weatherapp.base.WeatherData weatherData = weatherDataList.get(0);
         imgMainIcon.setImageResource(updateDailyIcons(weatherData));
 
-        currentTempHeader.setText(getString(R.string.temp_si_unit, weatherData.getmTemperature()));
-        currentTemp.setText(getString(R.string.temp_si_unit, weatherData.getmTemperature()));
-        minTemp.setText(getString(R.string.temp_si_unit, weatherData.getmMinTemperature()));
-        maxTemp.setText(getString(R.string.temp_si_unit, weatherData.getmMaxTemperature()));
+        txtCurrentTempHeader.setText(getString(R.string.temp_si_unit, weatherData.getmTemperature()));
+        txtCurrentTemp.setText(getString(R.string.temp_si_unit, weatherData.getmTemperature()));
+        txtMinTemp.setText(getString(R.string.temp_si_unit, weatherData.getmMinTemperature()));
+        txtMaxTemp.setText(getString(R.string.temp_si_unit, weatherData.getmMaxTemperature()));
 
     }
 
     private void updateBackgroundColor(String currentCond) {
         currentCond = currentCond.toLowerCase();
-        if ((currentCond.contains("clear"))) {
+        if ((currentCond.contains(CLEAR_CONDITION.toLowerCase()))) {
             showWeatherView.setBackgroundColor(getResources().getColor(R.color.colorSunny));
-        } else if ((currentCond.contains("cloud"))) {
+        } else if ((currentCond.contains(CLOUD_CONDITION.toLowerCase()))) {
             showWeatherView.setBackgroundColor(getResources().getColor(R.color.cloudy));
-        } else if ((currentCond.contains("rain"))) {
+        } else if ((currentCond.contains(RAIN_CONDITION.toLowerCase()))) {
             showWeatherView.setBackgroundColor(getResources().getColor(R.color.rainy));
         }
     }

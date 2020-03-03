@@ -33,13 +33,13 @@ public class ShowWeatherActivity_ViewBinding implements Unbinder {
 
     View view;
     target.daysRecyclerview = Utils.findRequiredViewAsType(source, R.id.temp_recyclerview, "field 'daysRecyclerview'", RecyclerView.class);
-    target.currentTempHeader = Utils.findRequiredViewAsType(source, R.id.txtCurrentTemp, "field 'currentTempHeader'", TextView.class);
+    target.txtCurrentTempHeader = Utils.findRequiredViewAsType(source, R.id.txtCurrentTemp, "field 'txtCurrentTempHeader'", TextView.class);
     target.noDataText = Utils.findRequiredViewAsType(source, R.id.no_data, "field 'noDataText'", TextView.class);
-    target.currentConditions = Utils.findRequiredViewAsType(source, R.id.txtCurrentCondition, "field 'currentConditions'", TextView.class);
+    target.txtCurrentConditions = Utils.findRequiredViewAsType(source, R.id.txtCurrentCondition, "field 'txtCurrentConditions'", TextView.class);
     target.summaryLayout = Utils.findRequiredViewAsType(source, R.id.summary_layout, "field 'summaryLayout'", ConstraintLayout.class);
-    target.minTemp = Utils.findRequiredViewAsType(source, R.id.min_temp_text, "field 'minTemp'", TextView.class);
-    target.currentTemp = Utils.findRequiredViewAsType(source, R.id.current_temp_text, "field 'currentTemp'", TextView.class);
-    target.maxTemp = Utils.findRequiredViewAsType(source, R.id.max_temp_text, "field 'maxTemp'", TextView.class);
+    target.txtMinTemp = Utils.findRequiredViewAsType(source, R.id.min_temp_text, "field 'txtMinTemp'", TextView.class);
+    target.txtCurrentTemp = Utils.findRequiredViewAsType(source, R.id.current_temp_text, "field 'txtCurrentTemp'", TextView.class);
+    target.txtMaxTemp = Utils.findRequiredViewAsType(source, R.id.max_temp_text, "field 'txtMaxTemp'", TextView.class);
     target.txtCity = Utils.findRequiredViewAsType(source, R.id.txtCity, "field 'txtCity'", TextView.class);
     target.imgMainIcon = Utils.findRequiredViewAsType(source, R.id.imgMainIcon, "field 'imgMainIcon'", ImageView.class);
     target.showWeatherView = Utils.findRequiredViewAsType(source, R.id.showWeatherView, "field 'showWeatherView'", ConstraintLayout.class);
@@ -65,13 +65,13 @@ public class ShowWeatherActivity_ViewBinding implements Unbinder {
     this.target = null;
 
     target.daysRecyclerview = null;
-    target.currentTempHeader = null;
+    target.txtCurrentTempHeader = null;
     target.noDataText = null;
-    target.currentConditions = null;
+    target.txtCurrentConditions = null;
     target.summaryLayout = null;
-    target.minTemp = null;
-    target.currentTemp = null;
-    target.maxTemp = null;
+    target.txtMinTemp = null;
+    target.txtCurrentTemp = null;
+    target.txtMaxTemp = null;
     target.txtCity = null;
     target.imgMainIcon = null;
     target.showWeatherView = null;

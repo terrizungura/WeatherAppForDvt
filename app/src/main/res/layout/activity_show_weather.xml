@@ -132,8 +132,8 @@
             android:layout_height="1dp"
             android:layout_marginTop="8dp"
             android:background="@color/colorWhite"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/max_temp_label_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -171,20 +171,20 @@
         android:id="@+id/imgFavorite"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:srcCompat="@drawable/fav"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:srcCompat="@drawable/fav" />
 
     <TextView
         android:id="@+id/txtCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="City"
         android:textColor="@color/colorWhite"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgMainIcon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCurrentCondition" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCurrentCondition"
+        tools:text="City" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
