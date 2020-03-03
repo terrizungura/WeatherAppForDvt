@@ -10,6 +10,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -156,6 +157,17 @@ public class ShowWeatherActivity extends AppCompatActivity {
             progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
             progressDialog.show();
             progressDialog.setCancelable(true);
+            Runnable progressRunnable = new Runnable() {
+
+                @Override
+                public void run() {
+                    progressDialog.cancel();
+
+                }
+            };
+
+            Handler pdCanceller = new Handler();
+            pdCanceller.postDelayed(progressRunnable, 15000);
         } else {
             progressDialog.cancel();
             progressDialog.dismiss();
@@ -242,7 +254,7 @@ public class ShowWeatherActivity extends AppCompatActivity {
     private void showError(Throwable throwable) {
         Log.e(TAG, "Error: " + throwable.getMessage());
         showHideProgressDialog(false);
-        Toast.makeText(this, " Retrofit Error: " + throwable.getMessage(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, " Cannot get data for specified location", Toast.LENGTH_LONG).show();
     }
 
     @Override
