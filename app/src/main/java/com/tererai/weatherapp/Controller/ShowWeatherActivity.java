@@ -91,8 +91,8 @@ public class ShowWeatherActivity extends AppCompatActivity {
     String LOCATION_PROVIDER = LocationManager.GPS_PROVIDER;
 
     private final String APP_ID = "728e7483dddb8d88cfdc006408674a1b";
-    // Time between location updates (5000 milliseconds or 5 seconds)
-    private final long MIN_TIME = 5000;
+    // Time between location updates (8000 milliseconds or 5 seconds)
+    private final long MIN_TIME = 8000;
     // Distance between location updates (1000m or 1km)
     private final float MIN_DISTANCE = 1000;
     private final String RAIN_CONDITION = "Rain";
@@ -116,7 +116,7 @@ public class ShowWeatherActivity extends AppCompatActivity {
     public void saveFavorites() {
 
         favoritesDbSet = new FavoritesDbSet(rlm);
-        FavoritesData favoritesData = new FavoritesData();
+        FavoritesData favoritesData;
         favoritesData = favoritesDbSet.createFavoritesData(txtCity.getText().toString());
         rlm.beginTransaction();
 
@@ -262,7 +262,7 @@ public class ShowWeatherActivity extends AppCompatActivity {
     private void showError(Throwable throwable) {
         Log.e(TAG, "Error: " + throwable.getMessage());
         showHideProgressDialog(false);
-        Toast.makeText(this, " Cannot get data for specified location", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, " Cannot get data for the location", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -332,10 +332,11 @@ public class ShowWeatherActivity extends AppCompatActivity {
 
     private void populateSummary(List<com.tererai.weatherapp.base.WeatherData> weatherDataList) {
         com.tererai.weatherapp.base.WeatherData weatherData = weatherDataList.get(0);
-        imgMainIcon.setImageResource(updateDailyIcons(weatherData));
 
+        imgMainIcon.setImageResource(updateDailyIcons(weatherData));
         txtCurrentTempHeader.setText(getString(R.string.temp_si_unit, weatherData.getmTemperature()));
         txtCurrentTemp.setText(getString(R.string.temp_si_unit, weatherData.getmTemperature()));
+
         txtMinTemp.setText(getString(R.string.temp_si_unit, weatherData.getmMinTemperature()));
         txtMaxTemp.setText(getString(R.string.temp_si_unit, weatherData.getmMaxTemperature()));
 

@@ -11,10 +11,11 @@ public class FavoritesDbSet {
 
     private Realm r;
 
-public FavoritesDbSet(Realm realm){
-r=realm;
+    public FavoritesDbSet(Realm realm) {
+        r = realm;
 
-}
+    }
+
     public RealmResults<FavoritesData> getFavoritesData() {
 
         return r.where(FavoritesData.class).findAll().sort("City");
@@ -24,17 +25,16 @@ r=realm;
         return r.where(FavoritesData.class).equalTo("City", City).findFirst();
     }
 
-    public FavoritesData createFavoritesData(String City){
+    public FavoritesData createFavoritesData(String City) {
 
         FavoritesData favoritesData = new FavoritesData();
-        favoritesData.ID = UUID.randomUUID().toString();;
+        favoritesData.ID = UUID.randomUUID().toString();
+        ;
         favoritesData.City = City;
 
         r.beginTransaction();
 
-        r.copyToRealm(favoritesData);            //save to database
-      //  monitoringReport.MonReportAttachments.add(monReportAttachment);       //link the Attchment to the parent monitoring report
-
+        r.copyToRealm(favoritesData);
         r.commitTransaction();
 
         return favoritesData;

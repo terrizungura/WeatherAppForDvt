@@ -20,7 +20,7 @@ import java.lang.Override;
 public class ShowWeatherActivity_ViewBinding implements Unbinder {
   private ShowWeatherActivity target;
 
-  private View view7f08008f;
+  private View view7f080090;
 
   @UiThread
   public ShowWeatherActivity_ViewBinding(ShowWeatherActivity target) {
@@ -45,7 +45,7 @@ public class ShowWeatherActivity_ViewBinding implements Unbinder {
     target.showWeatherView = Utils.findRequiredViewAsType(source, R.id.showWeatherView, "field 'showWeatherView'", ConstraintLayout.class);
     view = Utils.findRequiredView(source, R.id.imgFavorite, "field 'imgFavorite' and method 'saveFavorites'");
     target.imgFavorite = Utils.castView(view, R.id.imgFavorite, "field 'imgFavorite'", ImageView.class);
-    view7f08008f = view;
+    view7f080090 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -77,7 +77,7 @@ public class ShowWeatherActivity_ViewBinding implements Unbinder {
     target.showWeatherView = null;
     target.imgFavorite = null;
 
-    view7f08008f.setOnClickListener(null);
-    view7f08008f = null;
+    view7f080090.setOnClickListener(null);
+    view7f080090 = null;
   }
 }

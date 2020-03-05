@@ -10,6 +10,15 @@ public class WeatherResponse {
     @Expose
     private java.util.List<WeatherResponseList> weatherResponseList = null;
     private City city = null;
+    private CurrentWeather currentWeather = null;
+
+    public CurrentWeather getCurrentWeather() {
+        return currentWeather;
+    }
+
+    public void setCurrentWeather(CurrentWeather currentWeather) {
+        this.currentWeather = currentWeather;
+    }
 
     public City getCity() {
         return city;
