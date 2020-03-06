@@ -33,6 +33,7 @@ import butterknife.ButterKnife;
 import com.tererai.weatherapp.Model.FavoritesData;
 import com.tererai.weatherapp.R;
 import com.tererai.weatherapp.adapter.WeatherAdapter;
+import com.tererai.weatherapp.base.CurrentWeather;
 import com.tererai.weatherapp.base.FavoritesDbSet;
 import com.tererai.weatherapp.base.WeatherData;
 import com.tererai.weatherapp.base.WeatherResponse;
@@ -87,6 +88,7 @@ public class ShowWeatherActivity extends AppCompatActivity {
     private Realm rlm;
 
     private final int REQUEST_CODE = 123;
+    private double Fahrenheit = 273.15;
     private final String TAG = ShowWeatherActivity.class.getSimpleName();
     String LOCATION_PROVIDER = LocationManager.GPS_PROVIDER;
 
@@ -193,16 +195,15 @@ public class ShowWeatherActivity extends AppCompatActivity {
             public void onLocationChanged(Location location) {
                 Log.d(TAG, "onLocationChanged() called");
                 getWeatherForecast(location);
+                getWeatherCurrent(location);
             }
 
             @Override
             public void onStatusChanged(String provider, int status, Bundle extras) {
-
             }
 
             @Override
             public void onProviderEnabled(String provider) {
-
             }
 
             @Override
@@ -246,14 +247,48 @@ public class ShowWeatherActivity extends AppCompatActivity {
                 if (response.body() != null) {
                     showHideProgressDialog(false);
                     populateUIs(response.body());
-                }
-                else{
+                } else {
                     showHideProgressDialog(false);
                 }
             }
 
             @Override
             public void onFailure(Call<WeatherResponse> call, Throwable t) {
+                showError(t);
+            }
+        });
+    }
+
+    private void getWeatherCurrent(Location location) {
+        String longitude = String.valueOf(location.getLongitude());
+        String latitude = String.valueOf(location.getLatitude());
+        Intent myIntent = getIntent();
+        String city = myIntent.getStringExtra("City");
+
+        GetWeatherService weatherService = RetrofitClientInstance.getRetrofitInstance().create(GetWeatherService.class);
+        Call<CurrentWeather> call;
+        if (city != null) {
+            call = weatherService.getWeatherCurrentForCity(APP_ID, city);
+            Log.d(TAG, "getWeatherForCity() called");
+
+        } else {
+            call = weatherService.getWeatherCurrent(APP_ID, longitude, latitude);
+            Log.d(TAG, "getWeatherForecast() called");
+        }
+
+        call.enqueue(new Callback<CurrentWeather>() {
+            @Override
+            public void onResponse(Call<CurrentWeather> call, Response<CurrentWeather> response) {
+                if (response.body() != null) {
+                    showHideProgressDialog(false);
+                    populateOtherUIs(response.body());
+                } else {
+                    showHideProgressDialog(false);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<CurrentWeather> call, Throwable t) {
                 showError(t);
             }
         });
@@ -330,13 +365,23 @@ public class ShowWeatherActivity extends AppCompatActivity {
         }
     }
 
+    private void populateOtherUIs(CurrentWeather currentWeatherResponse) {
+        if (currentWeatherResponse != null && !currentWeatherResponse.getWeather().isEmpty()) {
+
+            txtNoData.setVisibility(View.GONE);
+
+            txtCurrentTemp.setText(((int) ((currentWeatherResponse.getMain().getTemp()) - Fahrenheit)) + "°");
+            txtCurrentTempHeader.setText(((int) ((currentWeatherResponse.getMain().getTemp()) - Fahrenheit)) + "°");
+
+        } else {
+            txtNoData.setVisibility(View.VISIBLE);
+        }
+    }
+
     private void populateSummary(List<com.tererai.weatherapp.base.WeatherData> weatherDataList) {
         com.tererai.weatherapp.base.WeatherData weatherData = weatherDataList.get(0);
 
         imgMainIcon.setImageResource(updateDailyIcons(weatherData));
-        txtCurrentTempHeader.setText(getString(R.string.temp_si_unit, weatherData.getmTemperature()));
-        txtCurrentTemp.setText(getString(R.string.temp_si_unit, weatherData.getmTemperature()));
-
         txtMinTemp.setText(getString(R.string.temp_si_unit, weatherData.getmMinTemperature()));
         txtMaxTemp.setText(getString(R.string.temp_si_unit, weatherData.getmMaxTemperature()));
 

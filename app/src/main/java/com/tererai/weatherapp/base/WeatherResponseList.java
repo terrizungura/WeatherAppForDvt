@@ -18,6 +18,16 @@ public class WeatherResponseList {
         return main;
     }
 
+    private CurrentWeather currentWeather;
+
+    public CurrentWeather getCurrentWeather() {
+        return currentWeather;
+    }
+
+    public void setCurrentWeather(CurrentWeather currentWeather) {
+        this.currentWeather = currentWeather;
+    }
+
     public void setMain(Main main) {
         this.main = main;
     }

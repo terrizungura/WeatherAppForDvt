@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
 import com.tererai.weatherapp.R;
 import com.tererai.weatherapp.adapter.FavoritesAdapter;
 import com.tererai.weatherapp.base.FavoritesDbSet;
@@ -15,7 +16,7 @@ import io.realm.Realm;
 
 public class FavoritePlacesActivity extends AppCompatActivity {
 
-   RecyclerView favRecycler;
+    RecyclerView favRecycler;
 
     private Realm rlm;
 
@@ -28,7 +29,7 @@ public class FavoritePlacesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite_places);
 
-       favRecycler = findViewById(R.id.favRecycler);
+        favRecycler = findViewById(R.id.favRecycler);
 
         rlm = Realm.getDefaultInstance();
         favoritesDbSet = new FavoritesDbSet(rlm);
@@ -49,7 +50,4 @@ public class FavoritePlacesActivity extends AppCompatActivity {
         favRecycler.setVisibility(View.VISIBLE);
 
     }
-
-
-
 }
