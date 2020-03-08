@@ -370,12 +370,17 @@ public class ShowWeatherActivity extends AppCompatActivity {
 
             txtNoData.setVisibility(View.GONE);
 
-            txtCurrentTemp.setText(((int) ((currentWeatherResponse.getMain().getTemp()) - Fahrenheit)) + "°");
-            txtCurrentTempHeader.setText(((int) ((currentWeatherResponse.getMain().getTemp()) - Fahrenheit)) + "°");
+            txtCurrentTemp.setText(getFormattedTemperature(currentWeatherResponse.getMain().getTemp()));
+            txtCurrentTempHeader.setText(getFormattedTemperature(currentWeatherResponse.getMain().getTemp()));
 
         } else {
             txtNoData.setVisibility(View.VISIBLE);
         }
+    }
+
+    private String getFormattedTemperature(Double temp){
+        int temperature = (int)(temp - Fahrenheit);
+        return getString(R.string.temp_si_unit, temperature);
     }
 
     private void populateSummary(List<com.tererai.weatherapp.base.WeatherData> weatherDataList) {
