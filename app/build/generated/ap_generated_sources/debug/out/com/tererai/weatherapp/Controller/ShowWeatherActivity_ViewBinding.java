@@ -20,7 +20,9 @@ import java.lang.Override;
 public class ShowWeatherActivity_ViewBinding implements Unbinder {
   private ShowWeatherActivity target;
 
-  private View view7f080090;
+  private View view7f08013f;
+
+  private View view7f080095;
 
   @UiThread
   public ShowWeatherActivity_ViewBinding(ShowWeatherActivity target) {
@@ -41,11 +43,20 @@ public class ShowWeatherActivity_ViewBinding implements Unbinder {
     target.txtCurrentTemp = Utils.findRequiredViewAsType(source, R.id.current_temp_text, "field 'txtCurrentTemp'", TextView.class);
     target.txtMaxTemp = Utils.findRequiredViewAsType(source, R.id.max_temp_text, "field 'txtMaxTemp'", TextView.class);
     target.txtCity = Utils.findRequiredViewAsType(source, R.id.txtCity, "field 'txtCity'", TextView.class);
+    view = Utils.findRequiredView(source, R.id.txtMapsView, "field 'txtMapsView' and method 'showOnMap'");
+    target.txtMapsView = Utils.castView(view, R.id.txtMapsView, "field 'txtMapsView'", TextView.class);
+    view7f08013f = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.showOnMap();
+      }
+    });
     target.imgMainIcon = Utils.findRequiredViewAsType(source, R.id.imgMainIcon, "field 'imgMainIcon'", ImageView.class);
     target.showWeatherView = Utils.findRequiredViewAsType(source, R.id.showWeatherView, "field 'showWeatherView'", ConstraintLayout.class);
     view = Utils.findRequiredView(source, R.id.imgFavorite, "field 'imgFavorite' and method 'saveFavorites'");
     target.imgFavorite = Utils.castView(view, R.id.imgFavorite, "field 'imgFavorite'", ImageView.class);
-    view7f080090 = view;
+    view7f080095 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -73,11 +84,14 @@ public class ShowWeatherActivity_ViewBinding implements Unbinder {
     target.txtCurrentTemp = null;
     target.txtMaxTemp = null;
     target.txtCity = null;
+    target.txtMapsView = null;
     target.imgMainIcon = null;
     target.showWeatherView = null;
     target.imgFavorite = null;
 
-    view7f080090.setOnClickListener(null);
-    view7f080090 = null;
+    view7f08013f.setOnClickListener(null);
+    view7f08013f = null;
+    view7f080095.setOnClickListener(null);
+    view7f080095 = null;
   }
 }

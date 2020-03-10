@@ -45,9 +45,11 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
         long MinTempIndex;
         long CurrentTempIndex;
         long MaxTempIndex;
+        long LongitudeIndex;
+        long LatitudeIndex;
 
         FavoritesDataColumnInfo(OsSchemaInfo schemaInfo) {
-            super(6);
+            super(8);
             OsObjectSchemaInfo objectSchemaInfo = schemaInfo.getObjectSchemaInfo("FavoritesData");
             this.IDIndex = addColumnDetails("ID", "ID", objectSchemaInfo);
             this.CityIndex = addColumnDetails("City", "City", objectSchemaInfo);
@@ -55,6 +57,8 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
             this.MinTempIndex = addColumnDetails("MinTemp", "MinTemp", objectSchemaInfo);
             this.CurrentTempIndex = addColumnDetails("CurrentTemp", "CurrentTemp", objectSchemaInfo);
             this.MaxTempIndex = addColumnDetails("MaxTemp", "MaxTemp", objectSchemaInfo);
+            this.LongitudeIndex = addColumnDetails("Longitude", "Longitude", objectSchemaInfo);
+            this.LatitudeIndex = addColumnDetails("Latitude", "Latitude", objectSchemaInfo);
             this.maxColumnIndexValue = objectSchemaInfo.getMaxColumnIndex();
         }
 
@@ -78,6 +82,8 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
             dst.MinTempIndex = src.MinTempIndex;
             dst.CurrentTempIndex = src.CurrentTempIndex;
             dst.MaxTempIndex = src.MaxTempIndex;
+            dst.LongitudeIndex = src.LongitudeIndex;
+            dst.LatitudeIndex = src.LatitudeIndex;
             dst.maxColumnIndexValue = src.maxColumnIndexValue;
         }
     }
@@ -273,14 +279,82 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
         proxyState.getRow$realm().setString(columnInfo.MaxTempIndex, value);
     }
 
+    @Override
+    @SuppressWarnings("cast")
+    public Double realmGet$Longitude() {
+        proxyState.getRealm$realm().checkIfValid();
+        if (proxyState.getRow$realm().isNull(columnInfo.LongitudeIndex)) {
+            return null;
+        }
+        return (double) proxyState.getRow$realm().getDouble(columnInfo.LongitudeIndex);
+    }
+
+    @Override
+    public void realmSet$Longitude(Double value) {
+        if (proxyState.isUnderConstruction()) {
+            if (!proxyState.getAcceptDefaultValue$realm()) {
+                return;
+            }
+            final Row row = proxyState.getRow$realm();
+            if (value == null) {
+                row.getTable().setNull(columnInfo.LongitudeIndex, row.getIndex(), true);
+                return;
+            }
+            row.getTable().setDouble(columnInfo.LongitudeIndex, row.getIndex(), value, true);
+            return;
+        }
+
+        proxyState.getRealm$realm().checkIfValid();
+        if (value == null) {
+            proxyState.getRow$realm().setNull(columnInfo.LongitudeIndex);
+            return;
+        }
+        proxyState.getRow$realm().setDouble(columnInfo.LongitudeIndex, value);
+    }
+
+    @Override
+    @SuppressWarnings("cast")
+    public Double realmGet$Latitude() {
+        proxyState.getRealm$realm().checkIfValid();
+        if (proxyState.getRow$realm().isNull(columnInfo.LatitudeIndex)) {
+            return null;
+        }
+        return (double) proxyState.getRow$realm().getDouble(columnInfo.LatitudeIndex);
+    }
+
+    @Override
+    public void realmSet$Latitude(Double value) {
+        if (proxyState.isUnderConstruction()) {
+            if (!proxyState.getAcceptDefaultValue$realm()) {
+                return;
+            }
+            final Row row = proxyState.getRow$realm();
+            if (value == null) {
+                row.getTable().setNull(columnInfo.LatitudeIndex, row.getIndex(), true);
+                return;
+            }
+            row.getTable().setDouble(columnInfo.LatitudeIndex, row.getIndex(), value, true);
+            return;
+        }
+
+        proxyState.getRealm$realm().checkIfValid();
+        if (value == null) {
+            proxyState.getRow$realm().setNull(columnInfo.LatitudeIndex);
+            return;
+        }
+        proxyState.getRow$realm().setDouble(columnInfo.LatitudeIndex, value);
+    }
+
     private static OsObjectSchemaInfo createExpectedObjectSchemaInfo() {
-        OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder("FavoritesData", 6, 0);
+        OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder("FavoritesData", 8, 0);
         builder.addPersistedProperty("ID", RealmFieldType.STRING, Property.PRIMARY_KEY, Property.INDEXED, !Property.REQUIRED);
         builder.addPersistedProperty("City", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
         builder.addPersistedProperty("CurrentCondition", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
         builder.addPersistedProperty("MinTemp", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
         builder.addPersistedProperty("CurrentTemp", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
         builder.addPersistedProperty("MaxTemp", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
+        builder.addPersistedProperty("Longitude", RealmFieldType.DOUBLE, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
+        builder.addPersistedProperty("Latitude", RealmFieldType.DOUBLE, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
         return builder.build();
     }
 
@@ -373,6 +447,20 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
                 objProxy.realmSet$MaxTemp((String) json.getString("MaxTemp"));
             }
         }
+        if (json.has("Longitude")) {
+            if (json.isNull("Longitude")) {
+                objProxy.realmSet$Longitude(null);
+            } else {
+                objProxy.realmSet$Longitude((double) json.getDouble("Longitude"));
+            }
+        }
+        if (json.has("Latitude")) {
+            if (json.isNull("Latitude")) {
+                objProxy.realmSet$Latitude(null);
+            } else {
+                objProxy.realmSet$Latitude((double) json.getDouble("Latitude"));
+            }
+        }
         return obj;
     }
 
@@ -429,6 +517,20 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
                 } else {
                     reader.skipValue();
                     objProxy.realmSet$MaxTemp(null);
+                }
+            } else if (name.equals("Longitude")) {
+                if (reader.peek() != JsonToken.NULL) {
+                    objProxy.realmSet$Longitude((double) reader.nextDouble());
+                } else {
+                    reader.skipValue();
+                    objProxy.realmSet$Longitude(null);
+                }
+            } else if (name.equals("Latitude")) {
+                if (reader.peek() != JsonToken.NULL) {
+                    objProxy.realmSet$Latitude((double) reader.nextDouble());
+                } else {
+                    reader.skipValue();
+                    objProxy.realmSet$Latitude(null);
                 }
             } else {
                 reader.skipValue();
@@ -512,6 +614,8 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
         builder.addString(columnInfo.MinTempIndex, realmObjectSource.realmGet$MinTemp());
         builder.addString(columnInfo.CurrentTempIndex, realmObjectSource.realmGet$CurrentTemp());
         builder.addString(columnInfo.MaxTempIndex, realmObjectSource.realmGet$MaxTemp());
+        builder.addDouble(columnInfo.LongitudeIndex, realmObjectSource.realmGet$Longitude());
+        builder.addDouble(columnInfo.LatitudeIndex, realmObjectSource.realmGet$Latitude());
 
         // Create the underlying object and cache it before setting any object/objectlist references
         // This will allow us to break any circular dependencies by using the object cache.
@@ -562,6 +666,14 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
         String realmGet$MaxTemp = ((com_tererai_weatherapp_Model_FavoritesDataRealmProxyInterface) object).realmGet$MaxTemp();
         if (realmGet$MaxTemp != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.MaxTempIndex, rowIndex, realmGet$MaxTemp, false);
+        }
+        Double realmGet$Longitude = ((com_tererai_weatherapp_Model_FavoritesDataRealmProxyInterface) object).realmGet$Longitude();
+        if (realmGet$Longitude != null) {
+            Table.nativeSetDouble(tableNativePtr, columnInfo.LongitudeIndex, rowIndex, realmGet$Longitude, false);
+        }
+        Double realmGet$Latitude = ((com_tererai_weatherapp_Model_FavoritesDataRealmProxyInterface) object).realmGet$Latitude();
+        if (realmGet$Latitude != null) {
+            Table.nativeSetDouble(tableNativePtr, columnInfo.LatitudeIndex, rowIndex, realmGet$Latitude, false);
         }
         return rowIndex;
     }
@@ -614,6 +726,14 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
             if (realmGet$MaxTemp != null) {
                 Table.nativeSetString(tableNativePtr, columnInfo.MaxTempIndex, rowIndex, realmGet$MaxTemp, false);
             }
+            Double realmGet$Longitude = ((com_tererai_weatherapp_Model_FavoritesDataRealmProxyInterface) object).realmGet$Longitude();
+            if (realmGet$Longitude != null) {
+                Table.nativeSetDouble(tableNativePtr, columnInfo.LongitudeIndex, rowIndex, realmGet$Longitude, false);
+            }
+            Double realmGet$Latitude = ((com_tererai_weatherapp_Model_FavoritesDataRealmProxyInterface) object).realmGet$Latitude();
+            if (realmGet$Latitude != null) {
+                Table.nativeSetDouble(tableNativePtr, columnInfo.LatitudeIndex, rowIndex, realmGet$Latitude, false);
+            }
         }
     }
 
@@ -665,6 +785,18 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
             Table.nativeSetString(tableNativePtr, columnInfo.MaxTempIndex, rowIndex, realmGet$MaxTemp, false);
         } else {
             Table.nativeSetNull(tableNativePtr, columnInfo.MaxTempIndex, rowIndex, false);
+        }
+        Double realmGet$Longitude = ((com_tererai_weatherapp_Model_FavoritesDataRealmProxyInterface) object).realmGet$Longitude();
+        if (realmGet$Longitude != null) {
+            Table.nativeSetDouble(tableNativePtr, columnInfo.LongitudeIndex, rowIndex, realmGet$Longitude, false);
+        } else {
+            Table.nativeSetNull(tableNativePtr, columnInfo.LongitudeIndex, rowIndex, false);
+        }
+        Double realmGet$Latitude = ((com_tererai_weatherapp_Model_FavoritesDataRealmProxyInterface) object).realmGet$Latitude();
+        if (realmGet$Latitude != null) {
+            Table.nativeSetDouble(tableNativePtr, columnInfo.LatitudeIndex, rowIndex, realmGet$Latitude, false);
+        } else {
+            Table.nativeSetNull(tableNativePtr, columnInfo.LatitudeIndex, rowIndex, false);
         }
         return rowIndex;
     }
@@ -725,6 +857,18 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
             } else {
                 Table.nativeSetNull(tableNativePtr, columnInfo.MaxTempIndex, rowIndex, false);
             }
+            Double realmGet$Longitude = ((com_tererai_weatherapp_Model_FavoritesDataRealmProxyInterface) object).realmGet$Longitude();
+            if (realmGet$Longitude != null) {
+                Table.nativeSetDouble(tableNativePtr, columnInfo.LongitudeIndex, rowIndex, realmGet$Longitude, false);
+            } else {
+                Table.nativeSetNull(tableNativePtr, columnInfo.LongitudeIndex, rowIndex, false);
+            }
+            Double realmGet$Latitude = ((com_tererai_weatherapp_Model_FavoritesDataRealmProxyInterface) object).realmGet$Latitude();
+            if (realmGet$Latitude != null) {
+                Table.nativeSetDouble(tableNativePtr, columnInfo.LatitudeIndex, rowIndex, realmGet$Latitude, false);
+            } else {
+                Table.nativeSetNull(tableNativePtr, columnInfo.LatitudeIndex, rowIndex, false);
+            }
         }
     }
 
@@ -753,6 +897,8 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
         unmanagedCopy.realmSet$MinTemp(realmSource.realmGet$MinTemp());
         unmanagedCopy.realmSet$CurrentTemp(realmSource.realmGet$CurrentTemp());
         unmanagedCopy.realmSet$MaxTemp(realmSource.realmGet$MaxTemp());
+        unmanagedCopy.realmSet$Longitude(realmSource.realmGet$Longitude());
+        unmanagedCopy.realmSet$Latitude(realmSource.realmGet$Latitude());
 
         return unmanagedObject;
     }
@@ -768,6 +914,8 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
         builder.addString(columnInfo.MinTempIndex, realmObjectSource.realmGet$MinTemp());
         builder.addString(columnInfo.CurrentTempIndex, realmObjectSource.realmGet$CurrentTemp());
         builder.addString(columnInfo.MaxTempIndex, realmObjectSource.realmGet$MaxTemp());
+        builder.addDouble(columnInfo.LongitudeIndex, realmObjectSource.realmGet$Longitude());
+        builder.addDouble(columnInfo.LatitudeIndex, realmObjectSource.realmGet$Latitude());
 
         builder.updateExistingObject();
         return realmObject;
@@ -802,6 +950,14 @@ public class com_tererai_weatherapp_Model_FavoritesDataRealmProxy extends com.te
         stringBuilder.append(",");
         stringBuilder.append("{MaxTemp:");
         stringBuilder.append(realmGet$MaxTemp() != null ? realmGet$MaxTemp() : "null");
+        stringBuilder.append("}");
+        stringBuilder.append(",");
+        stringBuilder.append("{Longitude:");
+        stringBuilder.append(realmGet$Longitude() != null ? realmGet$Longitude() : "null");
+        stringBuilder.append("}");
+        stringBuilder.append(",");
+        stringBuilder.append("{Latitude:");
+        stringBuilder.append(realmGet$Latitude() != null ? realmGet$Latitude() : "null");
         stringBuilder.append("}");
         stringBuilder.append("]");
         return stringBuilder.toString();

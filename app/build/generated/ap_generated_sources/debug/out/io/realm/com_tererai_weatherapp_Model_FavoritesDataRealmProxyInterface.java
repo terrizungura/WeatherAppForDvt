@@ -14,4 +14,8 @@ public interface com_tererai_weatherapp_Model_FavoritesDataRealmProxyInterface {
     public void realmSet$CurrentTemp(String value);
     public String realmGet$MaxTemp();
     public void realmSet$MaxTemp(String value);
+    public Double realmGet$Longitude();
+    public void realmSet$Longitude(Double value);
+    public Double realmGet$Latitude();
+    public void realmSet$Latitude(Double value);
 }

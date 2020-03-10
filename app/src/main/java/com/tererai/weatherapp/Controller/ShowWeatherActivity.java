@@ -70,6 +70,8 @@ public class ShowWeatherActivity extends AppCompatActivity {
     TextView txtMaxTemp;
     @BindView(R.id.txtCity)
     TextView txtCity;
+    @BindView(R.id.txtMapsView)
+    TextView txtMapsView;
     @BindView(R.id.imgMainIcon)
     ImageView imgMainIcon;
     @BindView(R.id.showWeatherView)
@@ -84,6 +86,10 @@ public class ShowWeatherActivity extends AppCompatActivity {
     private LocationListener mLocationListener;
 
     private FavoritesDbSet favoritesDbSet;
+
+    private double longitude;
+    private double latitude;
+    private String city;
 
     private Realm rlm;
 
@@ -357,12 +363,25 @@ public class ShowWeatherActivity extends AppCompatActivity {
             daysRecyclerview.setVisibility(View.VISIBLE);
             txtNoData.setVisibility(View.GONE);
             txtCity.setText(weatherResponse.getCity().getName());
+            longitude = weatherResponse.getCity().getCoord().getLon();
+            latitude = weatherResponse.getCity().getCoord().getLat();
+            city = weatherResponse.getCity().getName();
 
             populateSummary(weatherDataList);
         } else {
             daysRecyclerview.setVisibility(View.GONE);
             txtNoData.setVisibility(View.VISIBLE);
         }
+    }
+
+    @OnClick(R.id.txtMapsView)
+    public void showOnMap() {
+        Intent mapsIntent = new Intent(ShowWeatherActivity.this, MapsActivity.class);
+        mapsIntent.putExtra("latitude", latitude);
+        mapsIntent.putExtra("longitude", longitude);
+        mapsIntent.putExtra("city", city);
+        startActivity(mapsIntent);
+
     }
 
     private void populateOtherUIs(CurrentWeather currentWeatherResponse) {
@@ -378,8 +397,8 @@ public class ShowWeatherActivity extends AppCompatActivity {
         }
     }
 
-    private String getFormattedTemperature(Double temp){
-        int temperature = (int)(temp - Fahrenheit);
+    private String getFormattedTemperature(Double temp) {
+        int temperature = (int) (temp - Fahrenheit);
         return getString(R.string.temp_si_unit, temperature);
     }
 

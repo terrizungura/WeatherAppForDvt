@@ -12,12 +12,12 @@
         "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_forest_cloudy.png.flat",
@@ -28,12 +28,12 @@
         "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rain2x.png.flat",
-        "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\src\\main\\res\\drawable\\rain2x.png"
-    },
-    {
         "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_view_for_adapters.xml.flat",
         "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\src\\main\\res\\layout\\view_for_adapters.xml"
+    },
+    {
+        "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rain2x.png.flat",
+        "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\src\\main\\res\\drawable\\rain2x.png"
     },
     {
         "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -82,6 +82,10 @@
     {
         "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_fav.png.flat",
         "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\src\\main\\res\\drawable-v24\\fav.png"
+    },
+    {
+        "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_maps.xml.flat",
+        "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\src\\main\\res\\layout\\activity_maps.xml"
     },
     {
         "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_partlysunny3x.png.flat",
@@ -144,12 +148,12 @@
         "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
-    },
-    {
         "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\AndroidProjects\\DVTWeatherApp\\WeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_forest_rainy.png.flat",

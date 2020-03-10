@@ -8,6 +8,14 @@ public class City {
     @Expose
     private String name;
 
+    @SerializedName("coord")
+    @Expose
+    private Coord coord;
+    @SerializedName("country")
+    @Expose
+    private String country;
+
+
     public String getName ()
     {
         return name;
@@ -17,4 +25,21 @@ public class City {
     {
         this.name = name;
     }
+
+    public Coord getCoord() {
+        return coord;
+    }
+
+    public void setCoord(Coord coord) {
+        this.coord = coord;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
 }

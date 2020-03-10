@@ -14,6 +14,8 @@ public String CurrentCondition;
 public String MinTemp;
 public String CurrentTemp;
 public String MaxTemp;
+public Double Longitude;
+public Double Latitude;
 
 public FavoritesData(){
 

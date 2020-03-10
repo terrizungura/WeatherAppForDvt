@@ -181,10 +181,22 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorWhite"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgMainIcon"
+        app:layout_constraintBottom_toTopOf="@+id/txtMapsView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCurrentCondition"
         tools:text="City" />
+
+    <TextView
+        android:id="@+id/txtMapsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:text="@string/view_maps"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMainIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
