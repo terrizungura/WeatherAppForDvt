@@ -99,8 +99,8 @@ public class ShowWeatherActivity extends AppCompatActivity {
     String LOCATION_PROVIDER = LocationManager.GPS_PROVIDER;
 
     private final String APP_ID = "728e7483dddb8d88cfdc006408674a1b";
-    // Time between location updates (8000 milliseconds or 5 seconds)
-    private final long MIN_TIME = 8000;
+    // Time between location updates (5000 milliseconds or 5 seconds)
+    private final long MIN_TIME = 5000;
     // Distance between location updates (1000m or 1km)
     private final float MIN_DISTANCE = 1000;
     private final String RAIN_CONDITION = "Rain";
@@ -180,7 +180,7 @@ public class ShowWeatherActivity extends AppCompatActivity {
             };
 
             Handler pdCanceller = new Handler();
-            pdCanceller.postDelayed(progressRunnable, 15000);
+            pdCanceller.postDelayed(progressRunnable, 8000);
         } else {
             progressDialog.cancel();
             progressDialog.dismiss();
