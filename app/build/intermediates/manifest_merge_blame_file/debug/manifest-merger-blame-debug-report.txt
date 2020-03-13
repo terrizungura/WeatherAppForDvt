@@ -10,125 +10,111 @@
 9        android:targetSdkVersion="29" />
 9-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml
 10
-11    <!--
-12         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-13         Google Maps Android API v2, but you must specify either coarse or fine
-14         location permissions for the 'MyLocation' functionality.
-15    -->
-16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-16-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:10:5-79
-16-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:10:22-76
-17    <uses-permission android:name="android.permission.INTERNET" />
-17-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:11:5-67
-17-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:11:22-64
-18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-18-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:12:5-81
-18-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:12:22-78
-19
-20    <!-- Include required permissions for Google Maps API to run. -->
-21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-21-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5a5d830f36ca08a56e46561d311a61b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
-21-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5a5d830f36ca08a56e46561d311a61b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
-22
-23    <uses-feature
-23-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5a5d830f36ca08a56e46561d311a61b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
-24        android:glEsVersion="0x00020000"
-24-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5a5d830f36ca08a56e46561d311a61b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
-25        android:required="true" />
-25-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5a5d830f36ca08a56e46561d311a61b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
-26
-27    <application
-27-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:14:5-52:19
-28        android:allowBackup="true"
-28-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:15:9-35
-29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-29-->[androidx.core:core:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\d6c6a21d86608acf982483b793c5351e\core-1.1.0\AndroidManifest.xml:24:18-86
-30        android:debuggable="true"
-31        android:icon="@mipmap/ic_launcher"
-31-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:16:9-43
-32        android:label="@string/app_name"
-32-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:17:9-41
-33        android:roundIcon="@mipmap/ic_launcher_round"
-33-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:18:9-54
-34        android:supportsRtl="true"
-34-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:19:9-35
-35        android:testOnly="true"
-36        android:theme="@style/AppTheme" >
-36-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:20:9-40
-37
-38        <!--
-39             The API key for Google Maps-based APIs is defined as a string resource.
-40             (See the file "res/values/google_maps_api.xml").
-41             Note that the API key is linked to the encryption key used to sign the APK.
-42             You need a different API key for each encryption key, including the release key that is used to
-43             sign the APK for publishing.
-44             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-45        -->
-46        <meta-data
-46-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:30:9-32:55
-47            android:name="com.google.android.geo.API_KEY"
-47-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:31:13-58
-48            android:value="@string/google_maps_key" />
-48-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:32:13-52
-49
-50        <activity
-50-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:34:9-36:86
-51            android:name="com.tererai.weatherapp.Controller.MapsActivity"
-51-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:35:13-52
-52            android:parentActivityName="com.tererai.weatherapp.Controller.ShowWeatherActivity" />
-52-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:36:13-73
-53        <activity
-53-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:37:9-39:76
-54            android:name="com.tererai.weatherapp.Controller.FavoritePlacesActivity"
-54-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:38:13-62
-55            android:parentActivityName="com.tererai.weatherapp.Controller.ShowWeatherActivity" />
-55-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:39:13-73
-56        <activity
-56-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:40:9-42:76
-57            android:name="com.tererai.weatherapp.Controller.SearchCityActivity"
-57-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:41:13-58
-58            android:parentActivityName="com.tererai.weatherapp.Controller.ShowWeatherActivity" />
-58-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:42:13-73
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:5:5-79
+11-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:6:5-67
+12-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:7:22-78
+14
+15    <!-- Include required permissions for Google Maps API to run. -->
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\4cc54402983889d026e7a27820f4d638\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+16-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\4cc54402983889d026e7a27820f4d638\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+17
+18    <uses-feature
+18-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\4cc54402983889d026e7a27820f4d638\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+19        android:glEsVersion="0x00020000"
+19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\4cc54402983889d026e7a27820f4d638\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+20        android:required="true" />
+20-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\4cc54402983889d026e7a27820f4d638\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+21
+22    <application
+22-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:9:5-39:19
+23        android:allowBackup="true"
+23-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:10:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.1.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\ed47c4a39de0cc450e7102fc342c1ead\core-1.1.0\AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:11:9-43
+27        android:label="@string/app_name"
+27-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:12:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:13:9-54
+29        android:supportsRtl="true"
+29-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:14:9-35
+30        android:testOnly="true"
+31        android:theme="@style/AppTheme" >
+31-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:15:9-40
+32        <meta-data
+32-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:17:9-19:55
+33            android:name="com.google.android.geo.API_KEY"
+33-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:18:13-58
+34            android:value="@string/google_maps_key" />
+34-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:19:13-52
+35
+36        <activity
+36-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:21:9-23:86
+37            android:name="com.tererai.weatherapp.Controller.MapsActivity"
+37-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:22:13-52
+38            android:parentActivityName="com.tererai.weatherapp.Controller.ShowWeatherActivity" />
+38-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:23:13-73
+39        <activity
+39-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:24:9-26:76
+40            android:name="com.tererai.weatherapp.Controller.FavoritePlacesActivity"
+40-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:25:13-62
+41            android:parentActivityName="com.tererai.weatherapp.Controller.ShowWeatherActivity" />
+41-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:26:13-73
+42        <activity
+42-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:27:9-29:76
+43            android:name="com.tererai.weatherapp.Controller.SearchCityActivity"
+43-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:28:13-58
+44            android:parentActivityName="com.tererai.weatherapp.Controller.ShowWeatherActivity" />
+44-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:29:13-73
+45        <activity
+45-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:30:9-38:20
+46            android:name="com.tererai.weatherapp.Controller.ShowWeatherActivity"
+46-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:31:13-59
+47            android:screenOrientation="fullSensor" >
+47-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:32:13-51
+48            <intent-filter>
+48-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:33:13-37:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:34:17-69
+49-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:34:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:36:17-77
+51-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:36:27-74
+52            </intent-filter>
+53        </activity>
+54        <!-- Needs to be explicitly declared on P+ -->
+55        <uses-library
+55-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\4cc54402983889d026e7a27820f4d638\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+56            android:name="org.apache.http.legacy"
+56-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\4cc54402983889d026e7a27820f4d638\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+57            android:required="false" />
+57-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\4cc54402983889d026e7a27820f4d638\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+58
 59        <activity
-59-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:43:9-51:20
-60            android:name="com.tererai.weatherapp.Controller.ShowWeatherActivity"
-60-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:44:13-59
-61            android:screenOrientation="fullSensor" >
-61-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:45:13-51
-62            <intent-filter>
-62-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:46:13-50:29
-63                <action android:name="android.intent.action.MAIN" />
-63-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:47:17-69
-63-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:47:25-66
-64
-65                <category android:name="android.intent.category.LAUNCHER" />
-65-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:49:17-77
-65-->C:\AndroidProjects\DVTWeatherApp\WeatherApp\app\src\main\AndroidManifest.xml:49:27-74
-66            </intent-filter>
-67        </activity>
-68        <!-- Needs to be explicitly declared on P+ -->
-69        <uses-library
-69-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5a5d830f36ca08a56e46561d311a61b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-70            android:name="org.apache.http.legacy"
-70-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5a5d830f36ca08a56e46561d311a61b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
-71            android:required="false" />
-71-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5a5d830f36ca08a56e46561d311a61b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
-72
-73        <activity
-73-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5510576fbe18a0e0c17b3ca9cac0a747\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-74            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-74-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5510576fbe18a0e0c17b3ca9cac0a747\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-75            android:exported="false"
-75-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5510576fbe18a0e0c17b3ca9cac0a747\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-76            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-76-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\5510576fbe18a0e0c17b3ca9cac0a747\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-77
-78        <meta-data
-78-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\cb3c1b5a398b3d3972b9dec6734588c9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-79            android:name="com.google.android.gms.version"
-79-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\cb3c1b5a398b3d3972b9dec6734588c9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-80            android:value="@integer/google_play_services_version" />
-80-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\cb3c1b5a398b3d3972b9dec6734588c9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-81    </application>
-82
-83</manifest>
+59-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\da8302af9492d5f9ff4fcb115a739803\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+60            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+60-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\da8302af9492d5f9ff4fcb115a739803\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+61            android:exported="false"
+61-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\da8302af9492d5f9ff4fcb115a739803\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+62            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+62-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\da8302af9492d5f9ff4fcb115a739803\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+63
+64        <meta-data
+64-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\b542059b38e538b502a5132e35d799ed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+65            android:name="com.google.android.gms.version"
+65-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\b542059b38e538b502a5132e35d799ed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+66            android:value="@integer/google_play_services_version" />
+66-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Terri\.gradle\caches\transforms-2\files-2.1\b542059b38e538b502a5132e35d799ed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+67    </application>
+68
+69</manifest>
